@@ -1,0 +1,17 @@
+seed: 42
+data:
+  csv: data/synthetic/metadata.csv
+  target_shape: [48, 48, 48]
+  num_workers: 0
+  train_fraction: 0.70
+  val_fraction: 0.15
+  test_fraction: 0.15
+model:
+  name: tiny3d
+training:
+  epochs: 4
+  batch_size: 4
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  device: auto
+output_dir: outputs/smoke
