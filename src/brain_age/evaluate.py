@@ -72,7 +72,7 @@ def save_plots(df: pd.DataFrame, output_dir: Path) -> None:
     if groups:
         values = [eval_df.loc[eval_df["diagnosis"] == g, "bag_corrected"] for g in groups]
         fig = plt.figure(figsize=(6, 5))
-        plt.boxplot(values, labels=groups)
+        plt.boxplot(values, tick_labels=groups)
         plt.axhline(0, linestyle="--")
         plt.ylabel("Corrected BAG (years)")
         plt.tight_layout()
